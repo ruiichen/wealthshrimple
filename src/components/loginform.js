@@ -1,76 +1,62 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
+import jwt_decode from "jwt-decode";
+import { Google } from "@mui/icons-material";
+import WealthShrimpleLogoTP from '../assets/WealthShrimpleLogoTP.png'
 
 const LoginForm = () => {
-    const [username,setUsername] = useState('');
-    const [password,setPassword] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-    const usenavigate=useNavigate();
+    const usenavigate = useNavigate();
 
-    useEffect(()=>{
+    useEffect(() => {
         sessionStorage.clear();
-    },[])
-    
-    const ProceedLogin = (e) => {
-        e.preventDefault();
-        if(validate()) {
-            fetch("http://localhost:8080/users/user/find/" + username, {mode: 'no-cors'}).then((res) => {
-                return res.json();
-            }).then((resp) => {
-                console.log(resp);
-                if (Object.keys(resp).length == 0) {
-                    toast.error('Please enter valid username');
-                } else {
-                    if (resp.user.password === password) {
-                        toast.success('Success');
-                        sessionStorage.setItem('username', username);
-                        usenavigate('/')
-                    } else {
-                        toast.error('Please enter valid credentials');
-                    }
-                }
-            }).catch((err) => {
-                toast.error('Login failed due to : ' + err.message);
-            });
-        }
-    }
+    }, [])
 
-    const validate=()=>{
-        let result=true;
-        if(username===''||username===null) {
-            result = false;
-            toast.warning('Please enter Username');
-        }
-        if(password===''||password===null) {
-            result = false;
-            toast.warning('Please enter Password');
-        }
-        return result;
-    }
     return (
-        <div className="cover"> 
-            <form onSubmit={ProceedLogin} className="container">
-                <div className="card">
-                    <div className="card-header">
-                        <h2>User Login</h2>
-                    </div>
-                    <div className="card-body">
-                        <div className="form-group">
-                            <label>User name <span className="errmsg">*</span></label>
-                            <input value={username} onChange={e=> setUsername(e.target.value)} className="form-control"></input>
-                        </div>
-                        <div className="form-group">
-                            <label>Password <span className="errmsg">*</span></label>
-                            <input value={password} onChange={e=> setPassword(e.target.value)} className="form-control"></input>
-                        </div>
-                    </div>
-                    <div className="card-footer">
-                        <button type="submit" className="btn btn-primary"></button>
-                        <Link className="btn btn-success" to={'/register'}>New User</Link>
-                    </div>
+        <div className="body">
+            <div className="loginForm">
+                <img width="50" height="50" className="d-inline-block align-top" src={WealthShrimpleLogoTP} />
+                <h1>WealthShrimple<br></br><br></br></h1>
+                <br></br>
+                <div className="googleBtn">
+                    <GoogleLogin
+                        theme='outline'
+                        logo_alignment='center'
+                        width="large"
+                        //cookiePolicy='single-host-origin'
+                        onSuccess={credentialResponse => {
+                            sessionStorage.setItem('token', credentialResponse.credential);
+                            //Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+                            console.log('Bearer ' + credentialResponse.credential);
+                            fetch("http://localhost:8080/users/login", { method: 'GET', headers: { Authorization: 'Bearer ' + credentialResponse.credential, Accept: 'application/json' } }).then((res) => {
+                                if (res.status === 401) {
+                                    usenavigate('/login');
+                                }
+                                return res.json();
+                            }).then((resp) => {
+
+                                console.log(resp);
+                                if (resp.code === "2001") {
+                                    toast.success('Success');
+                                    sessionStorage.setItem('username', resp.user.password);
+                                    usenavigate('/')
+                                } else {
+                                    toast.success('Your account has been made');
+                                    sessionStorage.setItem('username', resp.user.password);
+                                    usenavigate('/')
+                                }
+                            }).catch((err) => {
+                                toast.error('Login failed due to : ' + err.message);
+                            });
+                        }}
+                    />
                 </div>
-            </form>
+            </div>
         </div>
     );
 }

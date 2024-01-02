@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +38,319 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.body{
+  padding-top: 9.5vh;
+}
+
+.stockView{
+  height: 90vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.stockView::-webkit-scrollbar{
+  display: none;
+}
+
+.body{
+  background-color: rgba(33,38,43,255);
+}
+
+
+.navbar-brand b{
+  font-family: 'Libre Caslon Text', serif;
+  padding-left: 15px;
+}
+
+
+.nav-link b{
+  font-family: 'Jost', sans-serif;
+}
+
+html {
+  background-color: rgba(33,38,43,255);
+}
+
+.tabbox h3{
+  color:white;
+  text-align: left;
+  margin-left: 23px;
+  font-family: 'Libre Caslon Text', serif;
+}
+
+.tabbox h5{
+  color:white;
+  text-align: left;
+  margin-left: 23px;
+  font-family: 'Jost', sans-serif;
+  font-size: small;
+}
+
+.tabbox h4{
+  color:white;
+  text-align: right;
+  margin-left: 23px;
+  font-family: 'Jost', sans-serif;
+  font-size: small;
+}
+
+.tabbox h1{
+  color:white;
+  text-align: left;
+  margin-left: 23px;
+  font-family: 'Libre Caslon Text', serif;
+  letter-spacing: 1px;
+}
+
+.stocksList {
+  background-color: rgba(43,48,53,255);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 4.5vh;
+  height:13vh;
+  border-radius: 7px;
+}
+
+.stocksList h5{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: smaller;
+}
+
+.stocksList h1 {
+  color:white;
+  font-family: 'Libre Caslon Text', serif;
+  font-size: larger;
+  text-align: left;
+}
+
+.stockView h4{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: small;
+}
+
+.stocksList hr {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 3px;
+  color: white;
+  border-width: 3px;
+  border-radius:1px;
+}
+
+.priceTag h3{
+  margin-top: 5px;
+  color: white;
+  text-align: right;
+  font-family: 'Jost', sans-serif;
+  font-size: small;
+}
+
+.priceTag h3 span {
+  background-color: rgb(129,158,152,255);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.pigpega{
+  width:100%;
+  object-fit: contain;
+  margin-bottom: 4.5vh;
+  border-radius: 7px;
+}
+
+.dotsLMFAO h1{
+  color: rgba(227,180,107,255);
+}
+
+.sellInterface {
+  margin:auto;
+  width: 80%;
+}
+
+.stockinput {
+  padding: 15px;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: rgba(43,48,53,255);
+  border-radius: 7px;
+}
+
+.stockinput h1 {
+  color:white;
+  font-family: 'Libre Caslon Text', serif;
+  font-size: xx-large;
+  text-align: left;
+}
+
+.stockinput h3 {
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: medium;
+}
+
+.stockinput h5{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: smaller;
+  padding-top:7px;
+}
+
+.searchBar {
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  font-family: 'Jost', sans-serif;
+  background-color: rgba(33,38,43,255);
+  border-style: solid;
+  border-radius: 5px;
+  border-color: rgb(129,158,152,255);
+  color: white;
+}
+
+.searchBar:focus{
+  outline: 1px solid white;
+}
+
+.sellForm {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(43,48,53,255);
+  border-radius: 7px;
+  padding: 15px;
+  margin-top: 5vh;
+}
+
+.sellForm h1{
+  color:white;
+  font-family: 'Libre Caslon Text', serif;
+  font-size: xx-large;
+  text-align: left;
+}
+
+.sellForm h3{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: large;
+  margin-top:23px;
+}
+
+.sellForm h3 span{
+  background-color: rgb(129,158,152,255);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.sellForm h5{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: medium;
+  margin-bottom: 1px;
+  margin-top: 23px;
+}
+
+.btn{
+  margin-top: 15px;
+  background-color: rgba(227,180,107,255);
+  font-family: 'Jost', sans-serif;
+}
+
+.btn:hover{
+  background-color: white;
+}
+
+.buyInterface {
+  margin:auto;
+  width: 80%;
+ 
+}
+
+.buyForm {
+  margin-top: 5vh;
+  border-radius: 7px;
+  padding: 15px;
+  background-color: rgba(43,48,53,255);
+}
+
+.buyForm h1 {
+  color:white;
+  font-family: 'Libre Caslon Text', serif;
+  font-size: xx-large;
+  text-align: left;
+  
+}
+
+.buyForm h3{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: large;
+  margin-top:23px;
+}
+
+.buyForm h4{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: large;
+  margin-top:23px;
+  margin-bottom: 17px;
+}
+
+.buyForm h4 span{
+  background-color: rgb(129,158,152,255);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.buyForm h5{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  text-align: left;
+  font-size: smaller;
+}
+
+.loginForm {
+  width:fit-content;
+  background-color: rgba(43,48,53,255);
+  margin: auto;
+  border-radius: 7px;
+  padding: 5%;
+  text-align: center;
+}
+
+.loginForm h1{
+  color:white;
+  font-family: 'Libre Caslon Text', serif;
+  font-size: xx-large;
+  padding-top: 13px;
+}
+
+.loginForm h3{
+  color:white;
+  font-family: 'Jost', sans-serif;
+  font-size: large;
+  margin-top:23px;
+  margin-bottom:13px;
+}
+
+.googleBtn{
+  width:fit-content;
+  margin:auto;
+}
+
+.stockView h3{
+  color:white;
+  text-align: left;
+  font-family: 'Libre Caslon Text', serif;
 }
