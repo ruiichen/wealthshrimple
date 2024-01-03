@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2d381ab0.css",
+    "main.js": "/static/js/main.1441438c.js",
+    "static/js/787.fef85f79.chunk.js": "/static/js/787.fef85f79.chunk.js",
+    "static/media/WealthShrimpleLogoTP.png": "/static/media/WealthShrimpleLogoTP.087de9bd68ad5de8b0e4.png",
+    "static/media/pigpega.png": "/static/media/pigpega.029fee727a417fe28635.png",
+    "static/media/logo.svg": "/static/media/logo.fb6d40c2395ec44dd68e2bd94fbb7e1e.svg",
+    "index.html": "/index.html",
+    "main.2d381ab0.css.map": "/static/css/main.2d381ab0.css.map",
+    "main.1441438c.js.map": "/static/js/main.1441438c.js.map",
+    "787.fef85f79.chunk.js.map": "/static/js/787.fef85f79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d381ab0.css",
+    "static/js/main.1441438c.js"
+  ]
+}
