@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/wealthshrimple/static/css/main.2d381ab0.css",
-    "main.js": "/wealthshrimple/static/js/main.6a876767.js",
+    "main.js": "/wealthshrimple/static/js/main.cbbe25cb.js",
     "static/js/787.fef85f79.chunk.js": "/wealthshrimple/static/js/787.fef85f79.chunk.js",
     "static/media/WealthShrimpleLogoTP.png": "/wealthshrimple/static/media/WealthShrimpleLogoTP.087de9bd68ad5de8b0e4.png",
     "static/media/pigpega.png": "/wealthshrimple/static/media/pigpega.029fee727a417fe28635.png",
     "static/media/logo.svg": "/wealthshrimple/static/media/logo.fb6d40c2395ec44dd68e2bd94fbb7e1e.svg",
     "index.html": "/wealthshrimple/index.html",
     "main.2d381ab0.css.map": "/wealthshrimple/static/css/main.2d381ab0.css.map",
-    "main.6a876767.js.map": "/wealthshrimple/static/js/main.6a876767.js.map",
+    "main.cbbe25cb.js.map": "/wealthshrimple/static/js/main.cbbe25cb.js.map",
     "787.fef85f79.chunk.js.map": "/wealthshrimple/static/js/787.fef85f79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d381ab0.css",
-    "static/js/main.6a876767.js"
+    "static/js/main.cbbe25cb.js"
   ]
 }
