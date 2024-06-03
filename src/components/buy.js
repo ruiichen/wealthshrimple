@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -93,7 +93,7 @@ const Buy = () => {
         e.preventDefault();
         setLoading(true);
         if (validate()) {
-            fetch('https://realstonks.p.rapidapi.com/' + ticker, options).then((res) => {
+            fetch('https://realstonks.p.rapidapi.com/stocks/' + ticker, options).then((res) => {
                 setLoading(false);
                 if (!res.ok) {
                     throw Error('invalid stock ticker');
@@ -104,7 +104,7 @@ const Buy = () => {
                     toast.error('Please enter a valid ticker');
                 } else {
                     setDisplayticker(ticker);
-                    setPrice(resp.price);
+                    setPrice(resp.lastPrice);
                     displaymenuupdate(true);
                 }
             }).catch((err) => {

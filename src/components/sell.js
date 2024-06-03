@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import * as ReactBootStrap from 'react-bootstrap';
 import Backdrop from '@mui/material/Backdrop';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sell = () => {
     const [stocks, setStocks] = useState([]);
@@ -85,7 +85,7 @@ const Sell = () => {
             return state;
         })
         setStocksMatch([]);
-        fetch('https://realstonks.p.rapidapi.com/' + e.ticker, options).then((res) => {
+        fetch('https://realstonks.p.rapidapi.com/stocks/' + e.ticker, options).then((res) => {
             if (!res.ok) {
                 throw Error('invalid stock ticker');
             }
@@ -95,8 +95,8 @@ const Sell = () => {
             if (Object.keys(resp).length === 0) {
                 toast.error('Please enter a valid ticker');
             } else {
-                setPrice(resp.price);
-                guh = resp.price;
+                setPrice(resp.lastPrice);
+                guh = resp.lastPrice;
                 console.log(guh);
                 setPrice((state) => {
                     //console.log(state);
