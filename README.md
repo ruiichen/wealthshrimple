@@ -4,6 +4,12 @@ Introducing [WealthShrimple](https://wealthshrimple-64d69.web.app/login): a pape
 
 Trying your hand at stocks can be a daunting task — it's not much different from gambling after all — and thats where WealthShrimple steps in. Designed for users with security in mind, each user has their own stock portfolio managed using Oauth2 and their Google account. Whether you are a veteran on market trends or just starting out Econ101, WealthShrimple will hopefully become a fun set of training wheels before you dive into the real stock market.
 
+
+https://github.com/ruiichen/wealthshrimple/assets/114363176/d544512b-ffd0-47a8-8213-a618f79de758
+
+
+
+
 ## Tech Stack
 Do note the backend is in a different repo. It is [here](https://github.com/ruiichen/wealthshrimple-backend).
 
