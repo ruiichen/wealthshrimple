@@ -11,7 +11,6 @@ https://github.com/ruiichen/wealthshrimple/assets/114363176/d544512b-ffd0-47a8-8
 
 
 ## Tech Stack
-Do note the backend is in a different repo. It is [here](https://github.com/ruiichen/wealthshrimple-backend).
 
 #### Frontend
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -36,6 +35,3 @@ Do note the backend is in a different repo. It is [here](https://github.com/ruii
 
 ## Architecture
 ![My First Board](https://github.com/ruiichen/wealthshrimple/assets/114363176/cb63f514-6722-4a5e-bdb2-b1b1d41d8de8)
-
-## Try out WealthShrimple!
-Site: https://wealthshrimple-64d69.web.app/login
